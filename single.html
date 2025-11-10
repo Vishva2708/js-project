@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single Product Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="project.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: whitesmoke;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+      }
+
+      .main {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+        min-height: 100vh;
+      }
+
+      .img img {
+        height: 440px;
+        width: 400px;
+        border-radius: 20px;
+        box-shadow: 5px 7px 5px 6px rgb(190, 190, 200);
+        transition: transform 0.3s ease;
+      }
+      .img img:hover {
+        transform: scale(0.9);
+      }
+
+      #single-products {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding: 24px;
+        border-radius: 15px;
+        gap: 10px;
+        transition: transform 0.3s ease;
+      }
+      #single-products:hover {
+        transform: scale(0.9);
+      }
+
+      #single-products h3,
+      #single-products h4 {
+        margin-bottom: 6px;
+      }
+
+      #single-products p {
+        line-height: 1.6;
+        font-size: 16px;
+      }
+
+      #add-to-cart-btn,
+      #wishlist-btn,
+      .btun {
+        padding: 9px;
+        font-size: 15px;
+        border: none;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      #add-to-cart-btn:hover,
+      #wishlist-btn:hover,
+      .btun:hover {
+        background-color: white;
+        color: black;
+      }
+
+      .btun {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark text-light fixed-top">
+      <div class="container-fluid">
+        <div class="logo">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/019/514/650/original/letter-s-logo-design-for-business-and-company-identity-with-luxury-concept-free-vector.jpg"
+            alt="Sprays Logo"
+            height="60"
+          />
+        </div>
+        <a class="navbar-brand fs-2 text-light fw-bold ps-3" href="#">Sprays</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars text-white"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto gap-3 ps-5" style="font-size: 18px">
+            <li class="nav-item dropdown position-static">
+              <a
+                class="nav-link dropdown-toggle text-light"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                All Sprays
+              </a>
+              <div class="dropdown-menu mega-menu bg-dark">
+                <div class="row">
+                  <div class="col-md-4">
+                    <h6 class="text-light fw-bold">Universal Fragrances</h6>
+                    <a class="dropdown-item text-light" href="#"
+                      >Cassili Eau De Parfum</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Delina La Rosee Eau De Parfum</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Delina Eau De Parfum</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Pegasus Eau De Parfum</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Oriana Eau De Parfum</a
+                    >
+                  </div>
+                  <div class="col-md-4">
+                    <h6 class="text-light fw-bold">Signature Perfumes</h6>
+                    <a class="dropdown-item text-light" href="#"
+                      >Althair Eau De Parfum</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Cassili Eau De Parfum</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Greenley Eau De Parfum</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Herod Eau De Parfum</a
+                    >
+                  </div>
+                  <div class="col-md-4">
+                    <h6 class="text-light fw-bold">Unisex Perfume</h6>
+                    <a class="dropdown-item text-light" href="#"
+                      >Cologne Arabic Air</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Cologne Gripped Rose</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Cologne Sapphire Sea</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Cologne To The Races</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-light"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Pages
+              </a>
+              <ul class="dropdown-menu bg-dark">
+                <li>
+                  <a class="dropdown-item text-light" href="#">Contact</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-light" href="#">About Us</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-light" href="#"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li><a class="dropdown-item text-light" href="#">FAQs</a></li>
+                <li>
+                  <a class="dropdown-item text-light" href="#"
+                    >Shipping & Policy</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-light" href="#"
+                    >Terms & Conditions</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-light"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Blog
+              </a>
+              <ul class="dropdown-menu bg-dark">
+                <li>
+                  <a class="dropdown-item text-light" href="#">Blog Page</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-light" href="#">Article Page</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="ico fs-4">
+            <span id="user-name" class="ms-3"></span>
+            <a
+              style="text-decoration: none; color: white"
+              href="login.html"
+              target="_blank"
+              ><i class="far fa-user"></i
+            ></a>
+
+            <a href="addtocart.html" class="position-relative text-white me-3">
+              <i class="fas fa-shopping-cart fa"></i>
+              <span
+                id="cart-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+              >
+                0
+              </span>
+            </a>
+
+            <a href="wishlist.html" class="position-relative text-white">
+              <i class="far fa-heart fa-lg"></i>
+              <span
+                id="wishlist-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+              >
+                0
+              </span>
+            </a>
+            <button
+              style="
+                font-size: 17px;
+                padding: 5px;
+                border: none;
+                border-radius: 10px;
+                background-color: white;
+                color: black;
+              "
+              onclick="logout()"
+            >
+              Logout
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="main mt-5 pt-5">
+      <div class="img">
+        <img id="products-image" src="" alt="Product Image" />
+      </div>
+
+      <div id="single-products">
+        <h4 id="products-brand"></h4>
+        <h3 id="products-title"></h3>
+        <p id="products-price"></p>
+        <p id="products-description"></p>
+        <p id="products-available"></p>
+        <button type="button" id="wishlist-btn">Add To Wishlist</button>
+        <button type="button" id="add-to-cart-btn">Add To Cart</button>
+        <a href="pro.html">
+          <button class="btun">Back to Home</button>
+        </a>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const userName = localStorage.getItem("loggedInName");
+        const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+        if (isLoggedIn === "true" && userName) {
+          document.getElementById("user-name").textContent = userName;
+        } else {
+          document.getElementById("user-name").textContent = "";
+        }
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let cartLength = cart.length;
+        document.getElementById("cart-count").textContent = cartLength;
+        localStorage.setItem("cartItems", JSON.stringify(cart));
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+        document.getElementById("wishlist-count").textContent = wishlist.length;
+      });
+      function logout() {
+        localStorage.removeItem("isLoggedIn");
+        localStorage.removeItem("loggedInName");
+        window.location.href = "login.html";
+      }
+    </script>
+    <script src="singlepro.js"></script>
+  </body>
+</html>

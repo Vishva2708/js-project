@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADD TO CART</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="project.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+      body {
+        background-color: #f7f7f7;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      .cart-container {
+        max-width: 70%;
+        margin: 40px auto;
+        background-color: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+      }
+      tr {
+        background-color: black;
+        color: wheat;
+      }
+      h2 {
+        font-family: "Times New Roman", Times, serif;
+        font-weight: 500;
+        color: white;
+        padding: 10px;
+        background-color: black;
+        box-shadow: 3px 3px 5px rgb(255, 255, 255);
+      }
+      #cart-total {
+        font-size: 17px;
+        font-weight: 600;
+        color: black;
+        padding-bottom: 20px;
+      }
+      .btun,
+      .buy {
+        height: 40px;
+        width: 200px;
+        font-size: 20px;
+        background-color: white;
+      }
+      #cart-count {
+        position: absolute;
+        color: white;
+        top: 10px;
+        bottom: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+     <nav class="navbar navbar-expand-lg bg-dark text-light fixed-top">
+      <div class="container-fluid">
+        <div class="logo">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/019/514/650/original/letter-s-logo-design-for-business-and-company-identity-with-luxury-concept-free-vector.jpg"
+            alt="Sprays Logo"
+            height="60"
+          />
+        </div>
+        <a class="navbar-brand fs-2 text-light fw-bold ps-3" href="#">Sprays</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars text-white"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto gap-3 ps-5" style="font-size: 18px">
+            <li class="nav-item dropdown position-static">
+              <a
+                class="nav-link dropdown-toggle text-light"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                All Sprays
+              </a>
+              <div class="dropdown-menu mega-menu bg-dark">
+                <div class="row">
+                  <div class="col-md-4">
+                    <h6 class="text-light fw-bold">Universal Fragrances</h6>
+                    <a class="dropdown-item text-light" href="#"
+                      >Cassili Eau De Parfum</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Delina La Rosee Eau De Parfum</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Delina Eau De Parfum</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Pegasus Eau De Parfum</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Oriana Eau De Parfum</a
+                    >
+                  </div>
+                  <div class="col-md-4">
+                    <h6 class="text-light fw-bold">Signature Perfumes</h6>
+                    <a class="dropdown-item text-light" href="#"
+                      >Althair Eau De Parfum</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Cassili Eau De Parfum</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Greenley Eau De Parfum</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Herod Eau De Parfum</a
+                    >
+                  </div>
+                  <div class="col-md-4">
+                    <h6 class="text-light fw-bold">Unisex Perfume</h6>
+                    <a class="dropdown-item text-light" href="#"
+                      >Cologne Arabic Air</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Cologne Gripped Rose</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Cologne Sapphire Sea</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Cologne To The Races</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-light"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Pages
+              </a>
+              <ul class="dropdown-menu bg-dark">
+                <li>
+                  <a class="dropdown-item text-light" href="#">Contact</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-light" href="#">About Us</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-light" href="#"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li><a class="dropdown-item text-light" href="#">FAQs</a></li>
+                <li>
+                  <a class="dropdown-item text-light" href="#"
+                    >Shipping & Policy</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-light" href="#"
+                    >Terms & Conditions</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-light"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Blog
+              </a>
+              <ul class="dropdown-menu bg-dark">
+                <li>
+                  <a class="dropdown-item text-light" href="#">Blog Page</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-light" href="#">Article Page</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="ico fs-4">
+            <span id="user-name" class="ms-3"></span>
+            <a
+              style="text-decoration: none; color: white"
+              href="login.html"
+              target="_blank"
+              ><i class="far fa-user"></i
+            ></a>
+
+            <a href="addtocart.html" class="position-relative text-white me-3">
+              <i class="fas fa-shopping-cart fa"></i>
+              <span
+                id="cart-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+              >
+                0
+              </span>
+            </a>
+
+            <a href="wishlist.html" class="position-relative text-white">
+              <i class="far fa-heart fa-lg"></i>
+              <span
+                id="wishlist-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+              >
+                0
+              </span>
+            </a>
+            <button
+              style="
+                font-size: 17px;
+                padding: 5px;
+                border: none;
+                border-radius: 10px;
+                background-color: white;
+                color: black;
+              "
+              onclick="logout()"
+            >
+              Logout
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="cart-container mt-5">
+      <h2 class="text-center mt-5 mb-4">ADD TO CART</h2>
+
+      <table class="table table-bordered align-middle">
+        <thead class="table-dark">
+          <tr class="text-center">
+            <th>Image</th>
+            <th>Spray Name</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Total</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody id="cart-table-body"></tbody>
+      </table>
+
+      <div class="d-flex justify-content-end align-items-center mt-5">
+        <h4 id="cart-total" class="mb-0 fs-4"></h4>
+      </div>
+
+      <div class="d-flex flex-column align-items-end gap-2 mt-2">
+        <h4 id="discount" class="fs-6 fw-bold"></h4>
+        <h4 id="cgst" class="fs-6 fw-bold"></h4>
+        <h4 id="sgst" class="fs-6 fw-bold"></h4>
+        <div id="final-amount" class="fs-5 fw-bold text-dark"></div>
+      </div>
+
+      <button type="submit" class="buy btn btn-outline-dark btn-sm">
+        BUY NOW!
+      </button>
+      <a href="payment.html">
+        <button class="btun btn btn-outline-dark btn-sm">
+          Check for Payment!
+        </button>
+      </a>
+      <a href="pro.html"><i class="fas fa-home"></i></a>
+    </div>
+
+    <script>
+      function addTocart() {
+        const cartTable = document.getElementById("cart-table-body");
+        const cartTotal = document.getElementById("cart-total");
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cartTable.innerHTML = "";
+        let total = 0;
+
+        cart.forEach((item, index) => {
+          const itemTotal = item.price * item.qty;
+          total += itemTotal;
+
+          cartTable.innerHTML += `
+          <tr class="text-center text-dark">
+            <td width="170px">
+              <img src="${item.image}" alt="${item.name}" class="img-fluid" />
+            </td>
+            <td>${item.name}</td>
+            <td>$${item.price.toLocaleString()}</td>
+            <td>
+            <div class="d-flex justify-content-center align-items-center">
+                <button type="button" class="btn btn-outline-dark text-dark btn-sm" onclick="changeQty(${index}, -1)">
+                  <i class="fa fa-minus"></i>
+                </button>
+                <span id="qty-${index}" class="mx-3">${item.qty}</span>
+                <button type="button" class="btn btn-outline-dark btn-sm" onclick="changeQty(${index}, 1)">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </div>
+            </td>
+            <td>$${itemTotal.toLocaleString()}</td>
+            <td>
+              <button class="btn btn-outline-dark btn-sm" onclick="removeFromCart(${index})">Remove</button>
+            </td>
+          </tr>`;
+        });
+        cartTotal.textContent = `Subtotal: $${total.toFixed(3)}`;
+
+        const discont = 0.1;
+        const cgst = 0.09;
+        const sgst = 0.09;
+
+        const discountAmount = total * discont;
+        const discountTotal = total - discountAmount;
+        const cgstAmount = discountTotal * cgst;
+        const sgstAmount = discountTotal * sgst;
+        const finalAmount = discountTotal + cgstAmount + sgstAmount;
+
+        document.getElementById(
+          "discount"
+        ).textContent = `Discount(10%): -$${discountAmount.toFixed(3)}`;
+        document.getElementById(
+          "cgst"
+        ).textContent = `CGST(9%): -$${cgstAmount.toFixed(3)}`;
+        document.getElementById(
+          "sgst"
+        ).textContent = `SGST(9%): -$${sgstAmount.toFixed(3)}`;
+        document.getElementById(
+          "final-amount"
+        ).textContent = `Total Payment: $${finalAmount.toFixed(2)}`;
+      }
+      function changeQty(index, delta) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let currentQty = cart[index].qty;
+        let newQty = currentQty + delta;
+
+        if (newQty < 1) newQty = 1;
+
+        cart[index].qty = newQty;
+        localStorage.setItem("cart", JSON.stringify(cart));
+        addTocart();
+      }
+
+      function removeFromCart(index) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        addTocart();
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        const userName = localStorage.getItem("loggedInName");
+        const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+        if (isLoggedIn && userName) {
+          document.getElementById("user-name").textContent = userName;
+        } else {
+          document.getElementById("user-name").textContent = "";
+        }
+      });
+      function logout() {
+        localStorage.removeItem("isLoggedIn");
+        localStorage.removeItem("loggedInName");
+        window.location.href = "login.html";
+      }
+      document.querySelector(".buy").addEventListener("click", function (e) {
+        e.preventDefault();
+        alert("You bought this! Keep shopping.");
+        localStorage.removeItem("cart");
+        window.location.href = "pro.html";
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let cartLength = cart.length;
+        document.getElementById("cart-count").textContent = cartLength;
+        localStorage.setItem("cartItems", JSON.stringify(cart));
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+        document.getElementById("wishlist-count").textContent = wishlist.length;
+      });
+      addTocart();
+    </script>
+  </body>
+</html>

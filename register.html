@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-light">
+  <div class="container d-flex justify-content-center align-items-center vh-100">
+    <form id="registerForm" class="p-4 bg-dark text-light shadow rounded" style="width: 100%; max-width: 400px;">
+      <h2 class="mb-3 text-center">Registration</h2>
+
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" id="name" class="form-control" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" class="form-control" required />
+        <small id="emailError" class="text-danger"></small>
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" id="password" class="form-control" required />
+        <small id="passwordError" class="text-danger"></small>
+      </div>
+
+      <button type="submit" class="btn w-100" style="background-color:black;color:white;">Registration</button>
+
+      <div class="mt-3 text-center">
+        <p>Already have an account? <a href="login.html" style="text-decoration: none; font-size:19px;color:rgb(236, 203, 141);">Login</a></p>
+      </div>
+    </form>
+  </div>  
+
+ <script>
+  document.getElementById("registerForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    let isValid = true;
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    const validationRules = {
+      name: (value) => value.length >= 3,
+      email: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value),
+      password: (value) => value.length >= 6,
+    };
+
+    const errorMessages = {
+      name: "Name must be at least 3 characters.",
+      email: "Please enter a valid email address.",
+      password: "Password must be at least 6 characters.",
+    };
+
+    document.querySelectorAll(".error").forEach(ele => ele.textContent = "");
+
+    for (let field in validationRules) {
+      const value = eval(field);
+      if (!validationRules[field](value)) {
+        document.getElementById(field + "Error").textContent = errorMessages[field];
+        isValid = false;
+      }
+    }
+
+    if (isValid) {
+      let users = JSON.parse(localStorage.getItem("users")) || [];
+      users.push({ name, email, password });
+      localStorage.setItem("users", JSON.stringify(users));
+
+      alert("Registration successful!");
+      window.location.href = "login.html";
+    }
+  });
+</script>
+
+</body>
+
+</html>

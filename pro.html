@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sprays WorkDo</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="project.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="shortcut icon" href="perfume-bottle.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="loader-container">
+      <div class="loader"></div>
+    </div>
+
+    <div id="content-container" style="display: none">
+      <nav class="navbar navbar-expand-lg bg-dark text-light fixed-top">
+        <div class="container-fluid">
+          <div class="logo">
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/019/514/650/original/letter-s-logo-design-for-business-and-company-identity-with-luxury-concept-free-vector.jpg"
+              alt="Sprays Logo"
+              height="60"
+            />
+          </div>
+          <a class="navbar-brand fs-2 text-light fw-bold ps-3" href="#"
+            >Sprays</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars text-white"></i>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto gap-3 ps-5" style="font-size: 20px">
+              <li class="nav-item dropdown position-static">
+                <a
+                  class="nav-link dropdown-toggle text-light"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  All Sprays
+                </a>
+                <div class="dropdown-menu mega-menu bg-dark">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <h6 class="text-light fw-bold">Universal Fragrances</h6>
+                      <a class="dropdown-item text-light" href="#"
+                        >Cassili Eau De Parfum</a
+                      >
+                      <a class="dropdown-item text-light" href="#"
+                        >Delina La Rosee Eau De Parfum</a
+                      >
+                      <a class="dropdown-item text-light" href="#"
+                        >Delina Eau De Parfum</a
+                      >
+                      <a class="dropdown-item text-light" href="#"
+                        >Pegasus Eau De Parfum</a
+                      >
+                      <a class="dropdown-item text-light" href="#"
+                        >Oriana Eau De Parfum</a
+                      >
+                    </div>
+                    <div class="col-md-4">
+                      <h6 class="text-light fw-bold">Signature Perfumes</h6>
+                      <a class="dropdown-item text-light" href="#"
+                        >Althair Eau De Parfum</a
+                      >
+                      <a class="dropdown-item text-light" href="#"
+                        >Cassili Eau De Parfum</a
+                      >
+                      <a class="dropdown-item text-light" href="#"
+                        >Greenley Eau De Parfum</a
+                      >
+                      <a class="dropdown-item text-light" href="#"
+                        >Herod Eau De Parfum</a
+                      >
+                    </div>
+                    <div class="col-md-4">
+                      <h6 class="text-light fw-bold">Unisex Perfume</h6>
+                      <a class="dropdown-item text-light" href="#"
+                        >Cologne Arabic Air</a
+                      >
+                      <a class="dropdown-item text-light" href="#"
+                        >Cologne Gripped Rose</a
+                      >
+                      <a class="dropdown-item text-light" href="#"
+                        >Cologne Sapphire Sea</a
+                      >
+                      <a class="dropdown-item text-light" href="#"
+                        >Cologne To The Races</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-light"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Pages
+                </a>
+                <ul class="dropdown-menu bg-dark">
+                  <li>
+                    <a class="dropdown-item text-light" href="#">Contact</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-light" href="#">About Us</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-light" href="#"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item text-light" href="#">FAQs</a></li>
+                  <li>
+                    <a class="dropdown-item text-light" href="#"
+                      >Shipping & Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-light" href="#"
+                      >Terms & Conditions</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-light"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Blog
+                </a>
+                <ul class="dropdown-menu bg-dark">
+                  <li>
+                    <a class="dropdown-item text-light" href="#">Blog Page</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-light" href="#"
+                      >Article Page</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <div class="ico fs-4">
+              <span id="user-name" class="ms-3"></span>
+              <a
+                style="text-decoration: none; color: white"
+                href="login.html"
+                target="_blank"
+                ><i class="far fa-user"></i
+              ></a>
+
+              <a href="cart.html" class="position-relative text-white me-3">
+                <i class="fas fa-shopping-cart fa"></i>
+                <span
+                  id="cart-count"
+                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+                >
+                  0
+                </span>
+              </a>
+
+              <a href="wishlist.html" class="position-relative text-white">
+                <i class="far fa-heart fa-lg"></i>
+                <span
+                  id="wishlist-count"
+                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+                >
+                  0
+                </span>
+              </a>
+              <button
+                style="
+                  font-size: 17px;
+                  padding: 5px;
+                  border: none;
+                  border-radius: 10px;
+                  background-color: white;
+                  color: black;
+                "
+                onclick="logout()"
+              >
+                Logout
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section
+        id="carouselExampleCaptions"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://sprays-workdo.myshopify.com/cdn/shop/files/home-bg.png?v=1700128841"
+              class="d-block w-100 img-fluid"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Sprays</h3>
+              <h1>The World of Spray Techniques</h1>
+              <a href="checkingpro.html"
+                ><button class="btn btn-primary">
+                  Check More Products<i
+                    class="fas fa-shopping-bag ps-3"
+                  ></i></button
+              ></a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://img.freepik.com/premium-photo/two-black-perfume-bottles-black-background-mockup-black-perfume-bottle_153090-263.jpg"
+              class="d-block w-100 img-fluid"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Sprays</h3>
+              <h1>The World of Spray Techniques</h1>
+              <a href="checkingpro.html"
+                ><button class="btn btn-primary">
+                  Check More Products<i
+                    class="fas fa-shopping-bag ps-3"
+                  ></i></button
+              ></a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://t3.ftcdn.net/jpg/05/78/51/62/360_F_578516239_63y1kTsGkzRPtiJCL5OaU2Sqs0IwOSVV.jpg"
+              class="d-block w-100 img-fluid"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Sprays</h3>
+              <h1>The World of Spray Techniques</h1>
+              <a href="checkingpro.html"
+                ><button class="btn btn-primary">
+                  Check More Products<i
+                    class="fas fa-shopping-bag ps-3"
+                  ></i></button
+              ></a>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="row spray">
+            <div class="col-lg-2">
+              <div class="photo d-none d-md-block">
+                <img
+                  src="https://sprays-workdo.myshopify.com/cdn/shop/files/cs.png?v=1700131662"
+                  alt="Product Image"
+                />
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="content-1 pt-4 pe-5">
+                <h6>Spray</h6>
+                <h1>The Science Behind Spray Dynamics</h1>
+                <p class="pt-3">
+                  In agriculture, the use of spraying technology revolutionizes
+                  crop management. Farmers employ specialized equipment to
+                  disperse pesticides, fertilizers, or herbicides across fields.
+                </p>
+                <div class="btn d-flex gap-5 pt-3">
+                  <button class="btn btn-secondary">
+                    Unisex Scent<i class="fas fa-shopping-bag ps-2"></i>
+                  </button>
+                  <button class="btn btn-secondary">
+                    Diamond scent<i class="fas fa-shopping-bag ps-2"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="imig">
+                <img
+                  class="img-fluid"
+                  src="https://sprays-workdo.myshopify.com/cdn/shop/files/chocolate2.png?v=1700131874"
+                  alt="Product Image"
+                />
+                <p>
+                  This precise application method ensures targeted coverage,
+                  safeguarding crops from pests, promoting growth, and
+                  maximizing yields.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <h1
+            class="txt mt-5 text-center"
+            style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif"
+          >
+            Transforming Surfaces with Spray Mastery
+          </h1>
+        </div>
+
+        <div
+          class="filters text-center"
+          data-aos="fade-up"
+          style="margin-top: 40px"
+        >
+          <label for="brandfilter">BRANDS: </label>
+          <select id="brandfilter">
+            <option value="all">All Brands</option>
+            <option value="Rihana">Rihana</option>
+            <option value="Dior">Dior</option>
+            <option value="Gucci">Gucci</option>
+            <option value="Versace">Versace</option>
+            <option value="Chanel">Chanel</option>
+            <option value="Swiss">Swiss</option>
+            <option value="Arabic">Arabic</option>
+          </select>
+
+          <label for="pricefilter text-center">PRICE: </label>
+          <select id="pricefilter">
+            <option value="all">All</option>
+            <option value="p1">Below $10</option>
+            <option value="p2">$10-$99</option>
+            <option value="p3">$99-$199</option>
+            <option value="p4">$199-$299</option>
+          </select>
+
+          <label for="sortname">Sort By Name: </label>
+          <select id="sortname">
+            <option value="all">All</option>
+            <option value="az">A-Z</option>
+            <option value="za">Z-A</option>
+          </select>
+          <label for="searchbyname">Search By Name: </label>
+          <input type="search" id="searchinput" placeholder="Search by name" />
+        </div>
+        <div class="con" id="prod" data-aos="zoom-in-up"></div>
+      </section>
+
+      <section>
+        <div data-aos="fade-up" class="news">
+          <h1>Subscribe newsletter and get -20% off</h1>
+          <p>
+            Sprays play a crucial role in manufacturing, from cooling systems in
+            industrial machinery to lubrication processes and the creation of
+            various products.
+          </p>
+          <input
+            type="email"
+            name=""
+            id="input"
+            placeholder="Your email address... "
+          />
+          <button><i class="fas fa-arrow-right"></i></button>
+        </div>
+      </section>
+
+      <section>
+        <h1 class="text-center mt-5" style="font-family: Georgia">
+          Testomonials
+        </h1>
+
+        <div class="container testi text-center">
+          <div class="col-md-6 d-flex align-items-center">
+            <div class="me-3">
+              <img
+                src="https://sprays-workdo.myshopify.com/cdn/shop/files/testi1.png?v=1700136430"
+                alt="Testimonial 1"
+                class="img-fluid"
+                style="max-width: 300px"
+              />
+            </div>
+            <div>
+              <h3>Excellent</h3>
+              <p>
+                Sprays are used to distribute liquids in fine droplets for even
+                coverage.I spray my soul in every stroke, bold colors cutting
+                through grey silence. This is more than paint."
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-center">
+            <div class="me-3">
+              <img
+                src="https://sprays-workdo.myshopify.com/cdn/shop/files/testi2.png?v=1700136430"
+                alt="Testimonial 2"
+                class="img-fluid"
+                style="max-width: 300px"
+              />
+            </div>
+            <div>
+              <h3>Excellent</h3>
+              <p>
+                Sprays are used to distribute liquids in fine droplets for even
+                coverage.I spray my soul in every stroke, bold colors cutting
+                through grey silence. This is more than paint."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer bg-dark text-light mt-5">
+        <div class="container p-5">
+          <div class="row">
+            <div class="col-md-5 mb-4">
+              <h1 class="fw-bold">Sprays</h1>
+              <p class="space">
+                Precision sprayers ensure targeted application, minimizing
+                environmental impact while maximizing crop yield and health.
+                Furthermore, irrigation systems utilize sprays to distribute
+                water efficiently.
+              </p>
+              <p class="nam" mt-5>
+                © 2025, Sprays WorkDo, Powered by WorkDo.io.
+              </p>
+            </div>
+
+            <div class="col-md-2 mb-4">
+              <h4 class="fw-bold">Navigation:</h4>
+              <ul class="f2">
+                <li>Home</li>
+                <li>Catalog</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+
+            <div class="col-md-3 mb-4">
+              <h4 class="fw-bold">About Us:</h4>
+              <ul class="f3">
+                <li>Contact</li>
+                <li>About us</li>
+                <li>FAQs</li>
+                <li>Privacy Policy</li>
+                <li>Shipping & Policy</li>
+                <li>Terms & Conditions</li>
+              </ul>
+            </div>
+
+            <div class="col-md-2 mb-4">
+              <h4 class="fw-bold">Share:</h4>
+              <div class="social-icons d-flex gap-3">
+                <a href="https://www.instagram.com/" target="_blank">
+                  <i class="fab fa-instagram fa-lg" style="color: white"></i>
+                </a>
+                <a href="https://www.tiktok.com/about" target="_blank">
+                  <i class="fab fa-tiktok fa-lg" style="color: white"></i>
+                </a>
+                <a href="https://support.microsoft.com/" target="_blank">
+                  <i class="fas fa-envelope fa-lg" style="color: white"></i>
+                </a>
+                <a href="https://www.pinterest.com" target="_blank">
+                  <i class="fab fa-pinterest fa-lg" style="color: white"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#top">
+          <button
+            class="bg-light rounded-circle p-2"
+            style="
+              margin-bottom: 24px;
+              width: 50px;
+              height: 50px;
+              z-index: 1000;
+            "
+          >
+            <i class="fas fa-arrow-up fs-2"></i>
+          </button>
+        </a>
+      </footer>
+    </div>
+    <script src="pro.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

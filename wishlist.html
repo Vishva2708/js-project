@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wishlist</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="project.css" />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f9f9f9;
+        padding: 30px 15px;
+      }
+
+      .wishlist-item {
+        background-color: #fff;
+        border-radius: 16px;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+        padding: 20px;
+        margin-bottom: 40px;
+        align-items: center;
+      }
+
+      .wishlist-item img {
+        width: 170px;
+        height: 150px;
+        object-fit: cover;
+      }
+
+      .wishlist-item-details h5 {
+        margin-bottom: 10px;
+        color: black;
+      }
+
+      .wishlist-item-details p {
+        margin-bottom: 8px;
+        color: black;
+      }
+
+      .remove-btn {
+        background-color: black;
+        color: white;
+        font-size: 17px;
+        border: none;
+        padding: 10px;
+        border-radius: 9px;
+        transition: background-color 0.3s ease;
+      }
+
+      .remove-btn:hover {
+        background-color: white;
+        color: black;
+      }
+
+      #empty-msg {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 40px;
+        color: black;
+      }
+
+      .back-btn {
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark text-light fixed-top">
+      <div class="container-fluid">
+        <div class="logo">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/019/514/650/original/letter-s-logo-design-for-business-and-company-identity-with-luxury-concept-free-vector.jpg"
+            alt="Sprays Logo"
+            height="60"
+          />
+        </div>
+        <a class="navbar-brand fs-2 text-light fw-bold ps-3" href="#">Sprays</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars text-white"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto gap-3 ps-5" style="font-size: 18px">
+            <li class="nav-item dropdown position-static">
+              <a
+                class="nav-link dropdown-toggle text-light"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                All Sprays
+              </a>
+              <div class="dropdown-menu mega-menu bg-dark">
+                <div class="row">
+                  <div class="col-md-4">
+                    <h6 class="text-light fw-bold">Universal Fragrances</h6>
+                    <a class="dropdown-item text-light" href="#"
+                      >Cassili Eau De Parfum</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Delina La Rosee Eau De Parfum</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Delina Eau De Parfum</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Pegasus Eau De Parfum</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Oriana Eau De Parfum</a
+                    >
+                  </div>
+                  <div class="col-md-4">
+                    <h6 class="text-light fw-bold">Signature Perfumes</h6>
+                    <a class="dropdown-item text-light" href="#"
+                      >Althair Eau De Parfum</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Cassili Eau De Parfum</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Greenley Eau De Parfum</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Herod Eau De Parfum</a
+                    >
+                  </div>
+                  <div class="col-md-4">
+                    <h6 class="text-light fw-bold">Unisex Perfume</h6>
+                    <a class="dropdown-item text-light" href="#"
+                      >Cologne Arabic Air</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Cologne Gripped Rose</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Cologne Sapphire Sea</a
+                    >
+                    <a class="dropdown-item text-light" href="#"
+                      >Cologne To The Races</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-light"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Pages
+              </a>
+              <ul class="dropdown-menu bg-dark">
+                <li>
+                  <a class="dropdown-item text-light" href="#">Contact</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-light" href="#">About Us</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-light" href="#"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li><a class="dropdown-item text-light" href="#">FAQs</a></li>
+                <li>
+                  <a class="dropdown-item text-light" href="#"
+                    >Shipping & Policy</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-light" href="#"
+                    >Terms & Conditions</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-light"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Blog
+              </a>
+              <ul class="dropdown-menu bg-dark">
+                <li>
+                  <a class="dropdown-item text-light" href="#">Blog Page</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-light" href="#">Article Page</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="ico fs-4">
+            <span id="user-name" class="ms-3"></span>
+            <a
+              style="text-decoration: none; color: white"
+              href="login.html"
+              target="_blank"
+              ><i class="far fa-user"></i
+            ></a>
+
+            <a href="addtocart.html" class="position-relative text-white me-3">
+              <i class="fas fa-shopping-cart fa"></i>
+              <span
+                id="cart-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+              >
+                0
+              </span>
+            </a>
+
+            <a href="wishlist.html" class="position-relative text-white">
+              <i class="far fa-heart fa-lg"></i>
+              <span
+                id="wishlist-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+              >
+                0
+              </span>
+            </a>
+            <button
+              style="
+                font-size: 17px;
+                padding: 5px;
+                border: none;
+                border-radius: 10px;
+                background-color: white;
+                color: black;
+              "
+              onclick="logout()"
+            >
+              Logout
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h2 class="mb-4 text-center">Your Wishlist</h2>
+      <div id="wishlist-container"></div>
+      <div id="empty-msg" style="display: none">Your wishlist is empty.</div>
+      <div class="text-center back-btn">
+        <a href="pro.html" class="btn btn-dark">Back to Home</a>
+      </div>
+    </div>
+
+    <script>
+      const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+      const container = document.getElementById("wishlist-container");
+      const emptyMsg = document.getElementById("empty-msg");
+
+      function Wishlist() {
+        container.innerHTML = "";
+
+        if (wishlist.length === 0) {
+          emptyMsg.style.display = "block";
+          return;
+        } else {
+          emptyMsg.style.display = "none";
+        }
+
+        wishlist.forEach((item, index) => {
+          const itemDiv = document.createElement("div");
+          itemDiv.classList.add("wishlist-item", "row");
+
+          itemDiv.innerHTML = `
+          <div class="col-md-3">
+            <img src="${item.image}" alt="${item.name}" class="img-fluid">
+          </div>
+          <div class="col-md-6 wishlist-item-details">
+            <h5>${item.name}</h5>
+            <p><strong>Brand:</strong> ${item.brand}</p>
+            <p><strong>Price:</strong> $${item.price}</p>
+          </div>
+          <div class="col-md-3 text-md-end text-start mt-3">
+            <button class="remove-btn" data-index="${index}">Remove</button>
+          </div>
+        `;
+
+          container.appendChild(itemDiv);
+        });
+
+        document.querySelectorAll(".remove-btn").forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const index = parseInt(this.getAttribute("data-index"));
+            wishlist.splice(index, 1);
+            localStorage.setItem("wishlist", JSON.stringify(wishlist));
+            Wishlist();
+          });
+        });
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let cartLength = cart.length;
+        document.getElementById("cart-count").textContent = cartLength;
+        localStorage.setItem("cartItems", JSON.stringify(cart));
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+        document.getElementById("wishlist-count").textContent = wishlist.length;
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const userName = localStorage.getItem("loggedInName");
+        const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+        if (isLoggedIn && userName) {
+          document.getElementById("user-name").textContent = userName;
+        } else {
+          document.getElementById("user-name").textContent = "";
+        }
+      });
+      Wishlist();
+    </script>
+  </body>
+</html>
