@@ -180,5 +180,5 @@ let products = [
 });
 
 } else {
-    window.location.href = "pro.html";
+    window.location.href = "index.html";
 }
